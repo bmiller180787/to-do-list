@@ -12,6 +12,15 @@
     <form class="addtolist" method="post" target="./todolist">
         <label>Add to the list: <input type="text"></label>
     </form>
+    <?php
+
+    foreach ($listItems as $listitem) {
+echo '<p>' . $listitem->getListItem . '</p>';
+echo '<button class="button" type="button">Mark as Complete</button>';
+
+    }
+
+    ?>
 </div>
 <div>
 

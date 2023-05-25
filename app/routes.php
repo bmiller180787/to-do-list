@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
+use App\Controllers\AddToListController;
 use App\Controllers\CoursesAPIController;
+use App\Controllers\ToDoListController;
 use Slim\App;
 use Slim\Views\PhpRenderer;
 use Slim\Interfaces\RouteCollectorProxyInterface as Group;
@@ -16,6 +18,7 @@ return function (App $app) {
         return $renderer->render($response, "index.php", $args);
     });
 
-    $app->get('/courses', CoursesAPIController::class);
+    $app->get('/addtolist', AddToListController::class);
+    $app->get('/todolist', ToDoListController::class);
 
 };
