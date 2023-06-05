@@ -9,8 +9,8 @@ use Slim\Views\PhpRenderer;
 
 class ToDoListController
 {
-private ListItemModel $listModel;
-private PhpRenderer $renderer;
+    private ListItemModel $listModel;
+    private PhpRenderer $renderer;
 
     public function __construct(ListItemModel $listModel, PhpRenderer $renderer)
     {
@@ -18,9 +18,9 @@ private PhpRenderer $renderer;
         $this->renderer = $renderer;
     }
 
-public function __invoke(RequestInterface $request, ResponseInterface $response, $args): ResponseInterface
-{
-$listItems = $this->listModel->getListItems();
-return $this->renderer->render($response, 'todolist.php', ['listItems' => $listItems]);
-}
+    public function __invoke(RequestInterface $request, ResponseInterface $response, $args): ResponseInterface
+    {
+        $listItems = $this->listModel->getListItems();
+        return $this->renderer->render($response, 'todolist.php', ['listItems' => $listItems]);
+    }
 }

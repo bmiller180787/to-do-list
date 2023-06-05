@@ -4,9 +4,9 @@ namespace App\Entities;
 
 class ListItem
 {
-private int $id;
-private string $listItem;
-private string $status;
+    private int $id;
+    private string $listitem;
+    private int $status;
 
     public function getId(): int
     {
@@ -17,17 +17,18 @@ private string $status;
     {
         $this->id = $id;
     }
-    public function getListItem(): string
+
+    public function getListitem(): string
     {
-        return $this->listItem;
+        return $this->listitem;
     }
 
-    public function setListItem(string $listItem): void
+    public function setListitem(string $listItem): void
     {
-        $this->listItem = $listItem;
+        $this->listitem = $listItem;
     }
 
-    public function getStatus(): string
+    public function getStatus(): int
     {
         return $this->status;
     }
