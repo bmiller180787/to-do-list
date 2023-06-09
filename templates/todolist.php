@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Slim 4</title>
-    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-</head>
+<html lang="eng">
 
 <body>
 <h1>To-Do List</h1>
-<div>
-    <form class="addtolist" method="post" target="./todolist">
-        <label>Add to the list: <input type="text"></label>
-
-    <?php
-    echo \App\ViewHelpers\ToDoListViewHelper::generateList($listItems);
-    ?>
-
+<div class="addtolist">
+    <form action="/addtolist" class="addtolistform" method="post">
+        <label>Add to the list: <input type="text" name="newlistitem"></label>
+        <button class="addToListButton" type="submit"> Add to List</button>
     </form>
 </div>
-<div>
 
-</div>
+    <?php
+//    echo '<pre>';
+//    echo var_dump($listItems);
+//    echo '</pre>';
+//    exit();
+    echo \App\ViewHelpers\ToDoListViewHelper::generateList($listItems);
+    ?>
 
 </body>
 </html>

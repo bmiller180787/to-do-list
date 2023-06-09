@@ -8,8 +8,8 @@ class ToDoListViewHelper
     {
         $output = '';
         foreach ($listItems as $listitem) {
-            $output .= '<p>' . $listitem->getListitem() . '</p>';
-            $output .= '<button class="button" type="button">Mark as Complete</button>';
+            $output .= '<div><form action="/markasdone"><label>' . $listitem->getListitem() . ' : </label>';
+            $output .= '<button class="button" type="button"> Mark as Complete</button></form></div>';
         }
         return $output;
     }
