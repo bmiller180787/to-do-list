@@ -21,7 +21,6 @@ class MarkAsCompleteController
         $data = $request->getParsedBody();
         $this->listItemModel->markAsComplete($data['markAsDone']);
         return $response
-//            ->withRedirect('/', 302);
             ->withHeader('Location', '/')
             ->withStatus(302);
     }

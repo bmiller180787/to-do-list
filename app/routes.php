@@ -4,6 +4,7 @@ declare(strict_types=1);
 use App\Controllers\AddToListController;
 use App\Controllers\MarkAsCompleteController;
 use App\Controllers\ToDoListController;
+use App\Controllers\ViewCompleteController;
 use Slim\App;
 
 return function (App $app) {
@@ -12,4 +13,5 @@ return function (App $app) {
     $app->get('/todolist', ToDoListController::class);
     $app->post('/addtolist', AddToListController::class);
     $app->post('/markasdone', MarkAsCompleteController::class);
+    $app->post('/viewdone', ViewCompleteController::class);
 };

@@ -1,0 +1,25 @@
+body {
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #00CC44;
+}
+
+input {
+    width: 30%;
+}
+
+.togglelist {
+    font-size: 0.75rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+button {
+    color: #004d1a;
+    border: 0.05rem solid #00CC44;
+    border-radius: 0.55rem;
+}

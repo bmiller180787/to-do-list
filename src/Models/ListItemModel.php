@@ -42,4 +42,15 @@ class ListItemModel
         $query -> bindParam(':listitem', $listitem);
         return $query->execute();
     }
+
+    public function getCompleteItems(): array
+    {
+        $sql = 'SELECT `id`, `listitem`, `status`
+            FROM `todo-list`
+            WHERE `status` = 1;';
+        $query = $this->db->prepare($sql);
+        $query->setFetchMode(PDO::FETCH_CLASS, ListItem::class);
+        $query->execute();
+        return $query->fetchAll();
+    }
 }

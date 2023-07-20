@@ -22,14 +22,8 @@
 </head>
 
 <body>
-<form action="/viewdone" method="post"><button class="togglelist">View Complete</button></form>
-<h1>Shopping List</h1>
-<div class="addtolist">
-    <form action="/addtolist" class="addtolistform" method="post">
-        <label>Add to the list: <input type="text" name="newlistitem"></label>
-        <button class="addToListButton" type="submit"> Add to List</button>
-    </form>
-</div>
+<form action="/markasdone" method="post"><button class="togglelist">View Incomplete</button></form>
+<h1>Completed Tasks</h1>
 
 <?php
 //    echo '<pre>';
